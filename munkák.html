@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Munkáim | Urban Walls</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="works-header">
+
+    <a href="index.html">
+        <img src="images/uw logo fehér.png" alt="M. Jay logó">
+    </a>
+
+    <h1>MUNKÁIM</h1>
+
+    <nav class="desktop-nav" id="desktopNav">
+    <a href="index.html">FŐOLDAL</a>
+    <a href="munkák.html">MUNKÁIM</a>
+    <div class="dropdown">
+        <a href="szolgáltatások.html">SZOLGÁLTATÁSOK</a>
+
+        <div class="dropdown-menu">
+            <a href="szolgáltatások.html#falfestes">Falfestés</a>
+            <a href="szolgáltatások.html#graffiti">Graffiti</a>
+            <a href="szolgáltatások.html#dekoracio">Dekoráció</a>
+            <a href="szolgáltatások.html#egyedi">Egyedi tervezés</a>
+        </div>
+    </div>
+
+    <a href="rólam.html">RÓLAM</a>
+    <a href="kapcsolat.html">KAPCSOLAT</a>
+</nav>
+
+        <!-- Mobil menü gomb -->
+<button class="mobile-menu-button" id="menuOpen" aria-label="Menü megnyitása">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Mobil oldalsó menü -->
+<div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-menu-close" id="menuClose" aria-label="Menü bezárása">
+        &times;
+    </button>
+
+    <nav class="mobile-nav">
+
+        <a href="index.html">FŐOLDAL</a>
+
+        <a href="munkák.html">MUNKÁIM</a>
+
+        <div class="mobile-dropdown">
+
+            <button class="mobile-dropdown-button" id="servicesToggle">
+                SZOLGÁLTATÁSOK
+                <span>+</span>
+            </button>
+
+            <div class="mobile-dropdown-content" id="servicesSubmenu">
+                <a href="szolgáltatások.html#falfestes">Falfestés</a>
+                <a href="szolgáltatások.html#graffiti">Graffiti</a>
+                <a href="szolgáltatások.html#dekoracio">Dekoráció</a>
+                <a href="szolgáltatások.html#egyedi">Egyedi tervezés</a>
+            </div>
+
+        </div>
+
+        <a href="rólam.html">RÓLAM</a>
+
+        <a href="kapcsolat.html">KAPCSOLAT</a>
+
+    </nav>
+
+</div>
+
+    </header>
+
+
+    <main class="works">
+
+        <div class="works-filter">
+            <button>ÖSSZES</button>
+            <button>FALFESTÉS</button>
+            <button>GRAFFITI</button>
+            <button>DEKORÁCIÓ</button>
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="https://placehold.co/800x600/e49b0f/ffffff?text=FALFESTÉS" alt="Falfestés">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://placehold.co/800x600/e49b0f/ffffff?text=GRAFFITI" alt="Graffiti">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://placehold.co/800x600/e49b0f/ffffff?text=DEKORÁCIÓ" alt="Dekoráció">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://placehold.co/800x600/e49b0f/ffffff?text=URBAN+WALLS" alt="Urban Walls">
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuOpen = document.getElementById("menuOpen");
+    const menuClose = document.getElementById("menuClose");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    const servicesToggle = document.getElementById("servicesToggle");
+    const servicesSubmenu = document.getElementById("servicesSubmenu");
+
+    menuOpen.onclick = function () {
+        mobileMenu.classList.add("active");
+        menuOverlay.classList.add("active");
+    };
+
+    menuClose.onclick = function () {
+        mobileMenu.classList.remove("active");
+        menuOverlay.classList.remove("active");
+    };
+
+    menuOverlay.onclick = function () {
+        mobileMenu.classList.remove("active");
+        menuOverlay.classList.remove("active");
+    };
+
+    if (servicesToggle && servicesSubmenu) {
+        servicesToggle.onclick = function () {
+            servicesSubmenu.classList.toggle("active");
+
+            const sign = servicesToggle.querySelector("span");
+
+            if (sign) {
+                sign.textContent =
+                    servicesSubmenu.classList.contains("active") ? "−" : "+";
+            }
+        };
+    }
+
+});
+</script>

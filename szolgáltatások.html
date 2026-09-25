@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Szolgáltatások | Urban Walls</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+</body>
+
+<body>
+
+    <header class="services-header">
+
+        <a href="index.html">
+            <img src="images/uw logo fehér.png" alt="M. Jay logó">
+        </a>
+
+        <h1>SZOLGÁLTATÁSOK</h1>
+
+       <nav class="desktop-nav">
+            <a href="index.html">FŐOLDAL</a>
+
+            <a href="munkák.html">MUNKÁIM</a>
+
+            <div class="dropdown">
+                <a href="szolgáltatások.html">SZOLGÁLTATÁSOK</a>
+
+                <div class="dropdown-menu">
+                    <a href="#falfestes">Falfestés</a>
+                    <a href="#graffiti">Graffiti</a>
+                    <a href="#dekoracio">Dekoráció</a>
+                    <a href="#egyedi">Egyedi tervezés</a>
+                </div>
+            </div>
+
+            <a href="rólam.html">RÓLAM</a>
+
+            <a href="kapcsolat.html">KAPCSOLAT</a>
+        </nav>
+
+        <!-- Mobil menü gomb -->
+<button class="mobile-menu-button" id="menuOpen" aria-label="Menü megnyitása">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Mobil oldalsó menü -->
+<div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-menu-close" id="menuClose" aria-label="Menü bezárása">
+        &times;
+    </button>
+
+    <nav class="mobile-nav">
+
+        <a href="index.html">FŐOLDAL</a>
+
+        <a href="munkák.html">MUNKÁIM</a>
+
+        <div class="mobile-dropdown">
+
+            <button class="mobile-dropdown-button" id="servicesToggle">
+                SZOLGÁLTATÁSOK
+                <span>+</span>
+            </button>
+
+            <div class="mobile-dropdown-content" id="servicesSubmenu">
+                <a href="szolgáltatások.html#falfestes">Falfestés</a>
+                <a href="szolgáltatások.html#graffiti">Graffiti</a>
+                <a href="szolgáltatások.html#dekoracio">Dekoráció</a>
+                <a href="szolgáltatások.html#egyedi">Egyedi tervezés</a>
+            </div>
+
+        </div>
+
+        <a href="rólam.html">RÓLAM</a>
+
+        <a href="kapcsolat.html">KAPCSOLAT</a>
+
+    </nav>
+
+</div>
+
+    </header>
+
+<main class="services">
+
+<section class="service-item" id="falfestes">
+    <div class="service-image">
+        <img src="images/falfestés.jpg" alt="Falfestés">
+    </div>
+
+    <div class="service-text">
+        <h2>FALFESTÉS</h2>
+
+        <p>
+            Egyedi falfestmények otthonokba, üzletekbe,
+            vendéglátóhelyekre és egyéb terekbe.
+        </p>
+
+        <a href="kapcsolat.html" class="service-button">
+            AJÁNLATKÉRÉS
+        </a>
+    </div>
+
+</section>
+
+
+        <section class="service-item reverse" id="graffiti">
+
+    <div class="service-image">
+        <img src="images/graffiti.jpg" alt="Graffiti">
+    </div>
+
+    <div class="service-text">
+        <h2>GRAFFITI</h2>
+
+        <p>
+            Graffiti stílusú feliratok, karakterek és
+            egyedi kompozíciók falra vagy más felületre.
+        </p>
+
+        <a href="kapcsolat.html" class="service-button">
+            AJÁNLATKÉRÉS
+        </a>
+    </div>
+
+</section>
+
+
+        <section class="service-item" id="dekoracio">
+
+            <div class="service-image">
+                <img src="images/dekoráció.jpg" alt="Dekoráció">
+            </div>
+
+            <div class="service-text">
+                <h2>DEKORÁCIÓ</h2>
+
+                <p>
+                    Egyedi dekorációk és látványos falfelületek
+                    üzletekbe, munkahelyekre és otthonokba.
+                </p>
+
+                <a href="kapcsolat.html" class="service-button">
+                    AJÁNLATKÉRÉS
+                </a>
+            </div>
+
+        </section>
+
+
+        <section class="service-item reverse" id="egyedi">
+
+            <div class="service-image">
+                <img src="images/egyedi tervezés.jpg" alt="Egyedi tervezés">
+            </div>
+
+            <div class="service-text">
+                <h2>EGYEDI TERVEZÉS</h2>
+
+                <p>
+                    Ha már van egy elképzelésed, vagy teljesen
+                    rám bíznád a tervezést, közösen kialakítjuk
+                    a megfelelő látványt.
+                </p>
+
+                <a href="kapcsolat.html" class="service-button">
+                    AJÁNLATKÉRÉS
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuOpen = document.getElementById("menuOpen");
+    const menuClose = document.getElementById("menuClose");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    const servicesToggle = document.getElementById("servicesToggle");
+    const servicesSubmenu = document.getElementById("servicesSubmenu");
+
+    if (menuOpen) {
+        menuOpen.onclick = function () {
+            mobileMenu.classList.add("active");
+            menuOverlay.classList.add("active");
+        };
+    }
+
+    if (menuClose) {
+        menuClose.onclick = function () {
+            mobileMenu.classList.remove("active");
+            menuOverlay.classList.remove("active");
+        };
+    }
+
+    if (menuOverlay) {
+        menuOverlay.onclick = function () {
+            mobileMenu.classList.remove("active");
+            menuOverlay.classList.remove("active");
+        };
+    }
+
+    if (servicesToggle && servicesSubmenu) {
+        servicesToggle.onclick = function () {
+            servicesSubmenu.classList.toggle("active");
+
+            const sign = servicesToggle.querySelector("span");
+
+            if (sign) {
+                sign.textContent =
+                    servicesSubmenu.classList.contains("active")
+                    ? "−"
+                    : "+";
+            }
+        };
+    }
+
+});
+</script>

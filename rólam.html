@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rólam | Urban Walls</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+</body>
+
+<body>
+
+    <header class="about-header">
+
+        <a href="index.html">
+            <img src="images/uw logo fehér.png" alt="M. Jay logó">
+        </a>
+
+        <h1>RÓLAM</h1>
+
+        <nav class="desktop-nav">
+            <a href="index.html">FŐOLDAL</a>
+
+            <a href="munkák.html">MUNKÁIM</a>
+
+            <div class="dropdown">
+                <a href="szolgáltatások.html">SZOLGÁLTATÁSOK</a>
+
+                <div class="dropdown-menu">
+    <a href="szolgáltatások.html#falfestes">Falfestés</a>
+    <a href="szolgáltatások.html#graffiti">Graffiti</a>
+    <a href="szolgáltatások.html#dekoracio">Dekoráció</a>
+    <a href="szolgáltatások.html#egyedi">Egyedi tervezés</a>
+</div>
+            </div>
+
+            <a href="rólam.html">RÓLAM</a>
+
+            <a href="kapcsolat.html">KAPCSOLAT</a>
+        </nav>
+
+        <!-- Mobil menü gomb -->
+<button class="mobile-menu-button" id="menuOpen" aria-label="Menü megnyitása">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Mobil oldalsó menü -->
+<div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-menu-close" id="menuClose" aria-label="Menü bezárása">
+        &times;
+    </button>
+
+    <nav class="mobile-nav">
+
+        <a href="index.html">FŐOLDAL</a>
+
+        <a href="munkák.html">MUNKÁIM</a>
+
+        <div class="mobile-dropdown">
+
+            <button class="mobile-dropdown-button" id="servicesToggle">
+                SZOLGÁLTATÁSOK
+                <span>+</span>
+            </button>
+
+            <div class="mobile-dropdown-content" id="servicesSubmenu">
+                <a href="szolgáltatások.html#falfestes">Falfestés</a>
+                <a href="szolgáltatások.html#graffiti">Graffiti</a>
+                <a href="szolgáltatások.html#dekoracio">Dekoráció</a>
+                <a href="szolgáltatások.html#egyedi">Egyedi tervezés</a>
+            </div>
+
+        </div>
+
+        <a href="rólam.html">RÓLAM</a>
+
+        <a href="kapcsolat.html">KAPCSOLAT</a>
+
+    </nav>
+
+</div>
+
+    </header>
+
+
+    <main class="about">
+
+        <section class="about-content">
+
+            <div class="about-image">
+                <img src="images/mjay.jpg" alt="M. Jay">
+            </div>
+
+            <div class="about-text">
+
+                <h2>M. JAY</h2>
+
+                <p>
+                    Az Urban Walls mögött én állok, M. Jay.
+                    A graffiti, a street art és a vizuális alkotás
+                    világa régóta meghatározó része annak, amit csinálok.
+                </p>
+
+                <p>
+                    Olyan falfelületeket és dekorációkat készítek,
+                    amelyek nem egyszerűen kitöltik a teret, hanem
+                    karaktert adnak neki.
+                </p>
+
+                <p>
+                    Legyen szó egy otthonról, üzletről, vendéglátóhelyről
+                    vagy kültéri falról, minden munkát az adott térhez
+                    és az elképzeléshez igazítok.
+                </p>
+
+                <p>
+                    Az Urban Walls célja, hogy a hétköznapi falakból
+                    egyedi és látványos felületek szülessenek.
+                </p>
+
+                <a href="kapcsolat.html" class="about-button">
+                    LÉPJ VELEM KAPCSOLATBA
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuOpen = document.getElementById("menuOpen");
+    const menuClose = document.getElementById("menuClose");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+
+    const servicesToggle = document.getElementById("servicesToggle");
+    const servicesSubmenu = document.getElementById("servicesSubmenu");
+
+    if (menuOpen) {
+        menuOpen.onclick = function () {
+            mobileMenu.classList.add("active");
+            menuOverlay.classList.add("active");
+        };
+    }
+
+    if (menuClose) {
+        menuClose.onclick = function () {
+            mobileMenu.classList.remove("active");
+            menuOverlay.classList.remove("active");
+        };
+    }
+
+    if (menuOverlay) {
+        menuOverlay.onclick = function () {
+            mobileMenu.classList.remove("active");
+            menuOverlay.classList.remove("active");
+        };
+    }
+
+    if (servicesToggle && servicesSubmenu) {
+        servicesToggle.onclick = function () {
+            servicesSubmenu.classList.toggle("active");
+
+            const sign = servicesToggle.querySelector("span");
+
+            if (sign) {
+                sign.textContent =
+                    servicesSubmenu.classList.contains("active")
+                    ? "−"
+                    : "+";
+            }
+        };
+    }
+
+});
+</script>
