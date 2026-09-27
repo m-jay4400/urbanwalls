@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>M. Jay - Wall Art</title>
+    <title>Munkáim | Urban Walls</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-
-</body>
 
 <body>
 
-    <header>
+  <header class="works-header">
 
+    <a href="index.html">
+        <img src="images/uw logo fehér.png" alt="M. Jay logó">
+    </a>
 
-    <img src="images/uw logo fehér.png" alt="M. Jay logó">
+    <h1>MUNKÁIM</h1>
 
-    <nav class="desktop-nav">
+    <nav class="desktop-nav" id="desktopNav">
+    <a href="index.html">FŐOLDAL</a>
     <a href="munkák.html">MUNKÁIM</a>
-
     <div class="dropdown">
         <a href="szolgáltatások.html">SZOLGÁLTATÁSOK</a>
 
         <div class="dropdown-menu">
-    <a href="szolgáltatások.html#falfestes">Falfestés</a>
-    <a href="szolgáltatások.html#graffiti">Graffiti</a>
-    <a href="szolgáltatások.html#dekoracio">Dekoráció</a>
-    <a href="szolgáltatások.html#egyedi">Egyedi tervezés</a>
-</div>
+            <a href="szolgáltatások.html#falfestes">Falfestés</a>
+            <a href="szolgáltatások.html#graffiti">Graffiti</a>
+            <a href="szolgáltatások.html#dekoracio">Dekoráció</a>
+            <a href="szolgáltatások.html#egyedi">Egyedi tervezés</a>
+        </div>
     </div>
 
     <a href="rólam.html">RÓLAM</a>
-
     <a href="kapcsolat.html">KAPCSOLAT</a>
 </nav>
 
-<!-- Mobil menü gomb -->
-<button class="mobile-menu-button"
-        id="menuOpen"
-        aria-label="Menü megnyitása">
+        <!-- Mobil menü gomb -->
+<button class="mobile-menu-button" id="menuOpen" aria-label="Menü megnyitása">
     <span></span>
     <span></span>
     <span></span>
@@ -90,190 +88,228 @@
 
 </div>
 
-</header>
+    </header>
 
-<section class="hero">
 
-    <div class="hero-content">
-        <h1>TE KITALÁLOD,<br>MI MEGVALÓSÍTJUK.</h1>
+    <main class="works">
 
-        <p>
-            Egyedi falfestés és kreatív faldekoráció.
-        </p>
+    <!-- MUNKÁIM -->
+    <section class="works-gallery-section">
 
-        <a href="munkák.html" class="hero-button">
-            MUNKÁIM
-        </a>
-    </div>
+        <h2 class="works-gallery-title">MUNKÁIM</h2>
 
-</section>
+        <div class="gallery">
 
-</header>
-
-<section class="services-preview">
-
-    <h2 class="section-title">SZOLGÁLTATÁSAIM</h2>
-
-    <div class="services-preview-grid">
-
-        <a href="szolgáltatások.html#falfestes" class="service-preview-item">
-            <div class="service-preview-image">
-                <img src="images/falfestés.jpg" alt="Falfestés">
+            <div class="gallery-item">
+                <img src="images/munka1.jpg" alt="M. Jay munkája">
             </div>
-            <h3>FALFESTÉS</h3>
-        </a>
 
-        <a href="szolgáltatások.html#graffiti" class="service-preview-item">
-            <div class="service-preview-image">
-                <img src="images/graffiti.jpg" alt="Graffiti">
+            <div class="gallery-item">
+                <img src="images/munka2.jpg" alt="M. Jay munkája">
             </div>
-            <h3>GRAFFITI</h3>
-        </a>
 
-        <a href="szolgáltatások.html#dekoracio" class="service-preview-item">
-            <div class="service-preview-image">
-                <img src="images/dekoráció.jpg" alt="Dekoráció">
-                </div>
-            <h3>DEKORÁCIÓ</h3>
-        </a>
-
-        <a href="szolgáltatások.html#egyedi" class="service-preview-item">
-            <div class="service-preview-image">
-                <img src="images/egyedi tervezés.jpg" alt="Egyedi tervezés">
+            <div class="gallery-item">
+                <img src="images/munka3.jpg" alt="M. Jay munkája">
             </div>
-            <h3>EGYEDI TERVEZÉS</h3>
-        </a>
 
-    </div>
+            <div class="gallery-item">
+                <img src="images/munka4.jpg" alt="M. Jay munkája">
+            </div>
 
-    <a href="szolgáltatások.html" class="services-preview-button">
-        ÖSSZES SZOLGÁLTATÁS
-    </a>
+            <div class="gallery-item">
+                <img src="images/munka5.jpg" alt="M. Jay munkája">
+            </div>
 
-</section>
+            <div class="gallery-item">
+                <img src="images/munka6.jpg" alt="M. Jay munkája">
+            </div>
 
-<section class="works-preview">
+            <div class="gallery-item">
+                <img src="images/munka7.jpg" alt="M. Jay munkája">
+            </div>
 
-    <h2 class="section-title">MUNKÁIM</h2>
+            <div class="gallery-item">
+                <img src="images/munka8.jpg" alt="M. Jay munkája">
+            </div>
 
-    <div class="works-preview-grid">
+            <div class="gallery-item">
+                <img src="images/munka9.jpg" alt="M. Jay munkája">
+            </div>
 
-        <div class="works-preview-item">
-            <img src="images/munka9.jpg" alt="M. Jay alkotása">
-        </div>
+            <div class="gallery-item">
+                <img src="images/munka10.jpg" alt="M. Jay munkája">
+            </div>
 
-        <div class="works-preview-item">
-            <img src="images/munka13.jpg" alt="M. Jay alkotása">
-        </div>
+            <div class="gallery-item">
+                <img src="images/munka11.jpg" alt="M. Jay munkája">
+            </div>
 
-        <div class="works-preview-item">
-            <img src="images/munka11.jpg" alt="M. Jay alkotása">
-        </div>
+            <div class="gallery-item">
+                <img src="images/munka12.jpg" alt="M. Jay munkája">
+            </div>
 
-        <div class="works-preview-item">
-            <img src="images/munka15.jpg" alt="M. Jay alkotása">
-        </div>
+            <div class="gallery-item">
+                <img src="images/munka13.jpg" alt="M. Jay munkája">
+            </div>
 
-    </div>
+            <div class="gallery-item">
+                <img src="images/munka14.jpg" alt="M. Jay munkája">
+            </div>
 
-    <a href="munkák.html" class="works-preview-button">
-        ÖSSZES MUNKÁM
-    </a>
+            <div class="gallery-item">
+                <img src="images/munka15.jpg" alt="M. Jay munkája">
+            </div>
 
-</section>
-
-<section class="about-preview">
-
-    <div class="about-preview-image">
-        <img src="images/mjay.jpg" alt="M. Jay">
-    </div>
-
-    <div class="about-preview-text">
-
-        <h2>M. JAY</h2>
-
-        <p>
-            Az Urban Walls mögött én állok, M. Jay.
-            A graffiti, a street art és a vizuális alkotás
-            világa régóta meghatározó része annak, amit csinálok.
-        </p>
-
-        <p>
-            Olyan falfelületeket és dekorációkat készítek,
-            amelyek karaktert adnak a térnek.
-        </p>
-
-        <a href="rólam.html" class="about-preview-button">
-            RÓLAM
-        </a>
-
-    </div>
-
-</section>
-
-<section class="contact-preview">
-
-    <div class="contact-preview-content">
-
-        <h2>VAN EGY ÖTLETED?</h2>
-
-        <p>
-            Beszéljük meg, hogyan válhat belőle egyedi falfestmény,
-            graffiti vagy dekoráció.
-        </p>
-
-        <a href="kapcsolat.html" class="contact-preview-button">
-            LÉPJ VELEM KAPCSOLATBA
-        </a>
-
-    </div>
-
-</section>
-
-<footer class="site-footer">
-
-    <div class="footer-content">
-
-        <div class="footer-brand">
-            <img src="images/uw logo fehér.png" alt="Urban Walls">
-            <p>
-                Egyedi falfestés, graffiti és kreatív faldekoráció.
-            </p>
-        </div>
-
-        <div class="footer-links">
-
-            <h3>OLDAL</h3>
-
-            <a href="index.html">FŐOLDAL</a>
-            <a href="munkák.html">MUNKÁIM</a>
-            <a href="szolgáltatások.html">SZOLGÁLTATÁSOK</a>
-            <a href="rólam.html">RÓLAM</a>
-            <a href="kapcsolat.html">KAPCSOLAT</a>
+            <div class="gallery-item">
+                <img src="images/munka16.jpg" alt="M. Jay munkája">
+            </div>
 
         </div>
 
-        <div class="footer-contact">
+    </section>
 
-            <h3>KAPCSOLAT</h3>
 
-            <a href="kapcsolat.html">AJÁNLATKÉRÉS</a>
-            <a href="#">INSTAGRAM</a>
-            <a href="#">FACEBOOK</a>
+    <!-- FOLYAMATOK -->
+    <section class="works-gallery-section">
 
+        <h2 class="works-gallery-title">FOLYAMATOK</h2>
+
+        <div class="process-gallery">
+
+    <div class="process-column">
+
+        <div class="gallery-item">
+            <img src="images/folyamat1.jpg" alt="M. Jay munka közben">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/folyamat4.jpeg" alt="M. Jay munka közben">
         </div>
 
     </div>
 
-    <div class="footer-bottom">
+    <div class="process-column">
 
-        <span>© 2026 URBAN WALLS</span>
+        <div class="gallery-item">
+            <img src="images/folyamat2.jpg" alt="M. Jay munka közben">
+        </div>
 
-        <span>M. JAY</span>
+        <div class="gallery-item">
+            <img src="images/folyamat5.jpeg" alt="M. Jay munka közben">
+        </div>
 
     </div>
 
-</footer>
+    <div class="process-column">
+
+        <div class="gallery-item">
+            <img src="images/folyamat3.jpg" alt="M. Jay munka közben">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/folyamat6.jpeg" alt="M. Jay munka közben">
+        </div>
+
+    </div>
+
+</div>
+
+    </section>
+
+
+    <!-- FESTMÉNYEK -->
+    <section class="works-gallery-section">
+
+        <h2 class="works-gallery-title">FESTMÉNYEK</h2>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="images/festmény1.jpg" alt="M. Jay festménye">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/festmény2.jpg" alt="M. Jay festménye">
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- KÉP NAGYÍTÓ -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+
+    <img id="lightboxImage" src="" alt="">
+
+</div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    const galleryImages = document.querySelectorAll(
+        ".gallery-item img"
+    );
+
+    galleryImages.forEach(function (image) {
+
+        image.addEventListener("click", function () {
+
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+
+            lightbox.classList.add("active");
+
+        });
+
+    });
+
+
+    lightboxClose.addEventListener("click", function () {
+
+        lightbox.classList.remove("active");
+
+    });
+
+
+    lightbox.addEventListener("click", function (event) {
+
+        if (event.target === lightbox) {
+
+            lightbox.classList.remove("active");
+
+        }
+
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            lightbox.classList.remove("active");
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -286,53 +322,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const servicesToggle = document.getElementById("servicesToggle");
     const servicesSubmenu = document.getElementById("servicesSubmenu");
 
+    menuOpen.onclick = function () {
+        mobileMenu.classList.add("active");
+        menuOverlay.classList.add("active");
+    };
 
-    /* MENÜ MEGNYITÁSA */
-    if (menuOpen) {
-        menuOpen.onclick = function () {
-            mobileMenu.classList.add("active");
-            menuOverlay.classList.add("active");
-        };
-    }
+    menuClose.onclick = function () {
+        mobileMenu.classList.remove("active");
+        menuOverlay.classList.remove("active");
+    };
 
+    menuOverlay.onclick = function () {
+        mobileMenu.classList.remove("active");
+        menuOverlay.classList.remove("active");
+    };
 
-    /* MENÜ BEZÁRÁSA */
-    if (menuClose) {
-        menuClose.onclick = function () {
-            mobileMenu.classList.remove("active");
-            menuOverlay.classList.remove("active");
-        };
-    }
-
-
-    /* HÁTTÉRRE KATTINTÁS */
-    if (menuOverlay) {
-        menuOverlay.onclick = function () {
-            mobileMenu.classList.remove("active");
-            menuOverlay.classList.remove("active");
-        };
-    }
-
-
-    /* SZOLGÁLTATÁSOK */
     if (servicesToggle && servicesSubmenu) {
-
         servicesToggle.onclick = function () {
-
             servicesSubmenu.classList.toggle("active");
 
             const sign = servicesToggle.querySelector("span");
 
             if (sign) {
                 sign.textContent =
-                    servicesSubmenu.classList.contains("active")
-                    ? "−"
-                    : "+";
+                    servicesSubmenu.classList.contains("active") ? "−" : "+";
             }
         };
-
     }
 
 });
-</script>
 </script>
