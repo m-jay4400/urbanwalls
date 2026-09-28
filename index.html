@@ -158,21 +158,41 @@
 
     <div class="works-preview-grid">
 
-        <div class="works-preview-item">
-            <img src="images/munka9.jpg" alt="M. Jay alkotása">
-        </div>
+    <div class="works-preview-item">
+        <img
+            src="images/web/munka9-web.jpg"
+            data-full="images/munka9.jpg"
+            alt="M. Jay alkotása"
+            loading="lazy"
+            decoding="async">
+    </div>
 
-        <div class="works-preview-item">
-            <img src="images/munka13.jpg" alt="M. Jay alkotása">
-        </div>
+    <div class="works-preview-item">
+        <img
+            src="images/web/munka13-web.jpg"
+            data-full="images/munka13.jpg"
+            alt="M. Jay alkotása"
+            loading="lazy"
+            decoding="async">
+    </div>
 
-        <div class="works-preview-item">
-            <img src="images/munka11.jpg" alt="M. Jay alkotása">
-        </div>
+    <div class="works-preview-item">
+        <img
+            src="images/web/munka11-web.jpg"
+            data-full="images/munka11.jpg"
+            alt="M. Jay alkotása"
+            loading="lazy"
+            decoding="async">
+    </div>
 
-        <div class="works-preview-item">
-            <img src="images/munka15.jpg" alt="M. Jay alkotása">
-        </div>
+    <div class="works-preview-item">
+        <img
+            src="images/web/munka15-web.jpg"
+            data-full="images/munka15.jpg"
+            alt="M. Jay alkotása"
+            loading="lazy"
+            decoding="async">
+    </div>
 
     </div>
 
@@ -286,6 +306,55 @@ document.addEventListener("DOMContentLoaded", function () {
     const servicesToggle = document.getElementById("servicesToggle");
     const servicesSubmenu = document.getElementById("servicesSubmenu");
 
+    /* KÉPNAGYÍTÓ */
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    const galleryImages = document.querySelectorAll(
+        ".gallery-item img, .works-preview-item img"
+    );
+
+    galleryImages.forEach(function (image) {
+
+        image.addEventListener("click", function () {
+
+            lightboxImage.src = image.dataset.full || image.src;
+            lightboxImage.alt = image.alt;
+
+            lightbox.classList.add("active");
+
+        });
+
+    });
+
+
+    if (lightboxClose) {
+        lightboxClose.onclick = function () {
+            lightbox.classList.remove("active");
+        };
+    }
+
+
+    if (lightbox) {
+        lightbox.onclick = function (event) {
+
+            if (event.target === lightbox) {
+                lightbox.classList.remove("active");
+            }
+
+        };
+    }
+
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape" && lightbox) {
+            lightbox.classList.remove("active");
+        }
+
+    });
 
     /* MENÜ MEGNYITÁSA */
     if (menuOpen) {
@@ -335,3 +404,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose">
+        &times;
+    </button>
+
+    <img id="lightboxImage" src="" alt="">
+
+</div>
